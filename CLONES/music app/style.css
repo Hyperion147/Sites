@@ -237,6 +237,7 @@ body{
     background: rgb(90, 90, 90);
     border-radius: 10px;
     width: 98%;
+    cursor: pointer;
 }
 
 .seekbar .circle{
@@ -247,5 +248,23 @@ body{
     background-color: white;
     border-radius: 30px;
     transition: left 0.5s;
-    /* cursor: ; */
+}
+
+
+.playArea{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.playArea .songInfo{
+    width: 40%;
+    padding-left: 20px;
+}
+
+.playArea .songTime{
+    display: flex;
+    justify-content: right;
+    width: 40%;
+    padding-right: 20px;
 }
