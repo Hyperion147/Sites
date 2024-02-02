@@ -4,14 +4,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 /* font-family: 'Poppins', sans-serif; */
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Roboto Mono', monospace; 
+    font-family: 'Roboto Mono', monospace;
 }
 
-body{
+body {
     height: 100vh;
     color: black;
     background-image: url("bgImg.jpg");
@@ -19,12 +19,12 @@ body{
     background-position: center;
 }
 
-li{
+li {
     font-family: 'Poppins', sans-serif;
     list-style: none;
 }
 
-a{
+a {
     font-family: 'Poppins', sans-serif;
     text-decoration: none;
     color: black;
@@ -32,16 +32,16 @@ a{
     font-size: 1rem;
 }
 
-a:hover{
+a:hover {
     color: rgb(69, 239, 227);
 }
 
-header{
+header {
     position: relative;
     padding: 0.2rem;
 }
 
-.navbar{
+.navbar {
     width: 100%;
     height: 60px;
     max-width: 1200px;
@@ -51,26 +51,26 @@ header{
     justify-content: space-between;
 }
 
-.navbar .logo a{
+.navbar .logo a {
     font-size: 1.5rem;
     font-weight: 800;
     text-decoration: none;
     color: black;
 }
 
-.navbar .links{
+.navbar .links {
     display: flex;
     gap: 2rem;
 }
 
-.navbar .toggle_btn{
+.navbar .toggle_btn {
     color: black;
-    font-size:1.5rem;
+    font-size: 1.5rem;
     cursor: pointer;
     display: none;
 }
 
-.action_btn{
+.action_btn {
     background-color: #66756a;
     color: black;
     padding: 0.5rem 1rem;
@@ -84,16 +84,16 @@ header{
     transition: scale 0.2 ease;
 }
 
-.action_btn:hover{
+.action_btn:hover {
     scale: 1.05;
     color: white;
 }
 
-.action_btn:active{
+.action_btn:active {
     scale: 0.95rem;
 }
 
-.dropdown_menu{
+.dropdown_menu {
     display: none;
     position: absolute;
     right: 2rem;
@@ -107,23 +107,23 @@ header{
     transition: height cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-.dropdown_menu li{
+.dropdown_menu li {
     padding: 0.7rem;
     display: flex;
     justify-content: center;
 }
 
-.dropdown_menu .action_btn{
+.dropdown_menu .action_btn {
     width: 100%;
     display: flex;
     justify-content: center;
 }
 
-.dropdown_menu.open{
+.dropdown_menu.open {
     height: 240px;
 }
 
-section#hero{
+section#hero {
     height: calc(100vh - 60px);
     display: flex;
     flex-direction: column;
@@ -133,35 +133,35 @@ section#hero{
     color: white;
 }
 
-#hero h1{
+#hero h1 {
     font-size: 3rem;
     font-family: 'Poppins', sans-serif;
 }
 
 
-@media(max-width: 992px){
-
-    header{
+@media(max-width: 992px) {
+    header {
         padding: 15px;
     }
+
     .navbar .links,
-    .navbar .action_btn{
+    .navbar .action_btn {
         display: none;
     }
 
-.navbar .toggle_btn{
-    display: block;
-}
+    .navbar .toggle_btn {
+        display: block;
+    }
 
-.dropdown_menu{
-    display: block;
-}
+    .dropdown_menu {
+        display: block;
+    }
 
 }
 
 
 @media (max-width: 576px) {
-    .dropdown_menu{
+    .dropdown_menu {
         left: 2rem;
         width: unset;
     }
