@@ -45,6 +45,7 @@ body{
     width: 25px;
 }
 
+
 .heading h2{
     display: flex;
     align-items: center;
@@ -132,6 +133,14 @@ body{
     padding: 16px;
 }
 
+.hamburger{
+    display: none;
+}
+
+.close{
+    display: none;
+}
+
 .playlists{
     font-family: 'Poppins', sans-serif;
     font-weight: bolder;
@@ -143,7 +152,7 @@ body{
     display: flex;
     flex-wrap: wrap ;
     max-height: 70vh;
-    overflow-y: scroll;
+    overflow-y: auto;
     overflow-x: hidden;
 }
 
@@ -267,4 +276,70 @@ body{
     justify-content: right;
     width: 40%;
     padding-right: 20px;
+}
+
+@media (max-width: 1400px) {
+    .left{
+        position: absolute;
+        left: -120%;
+        background-color: black;
+        width: 370px;
+        z-index: 1;
+        transition: all 0.3s ease;
+    }
+    .left .footer{
+        display: none;
+    }
+    .right{
+        width: 100vw;
+        height: 92vh;
+    }
+    .playbar{
+        bottom: 0;
+    }
+    .hamburgerCont{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+    .hamburger{
+        display: block;
+    }
+    .left .close{
+        display: block;
+        position: absolute;
+        right: 15px;
+        top: 15px;
+    }   
+    .seekbar{
+        width: 93vw;
+    }
+}
+
+@media (max-width: 400px) {
+    .left .footer{
+        display: none;
+    }
+    .right{
+        padding-top: 0;
+        width: 350px;
+        height: 615px;
+    }
+    .right .header{
+        display: flex;
+    }
+    .loginBtn{
+        padding: 5px 10px;
+    }
+    .signUpBtn{
+        padding: 5px 10px;
+    }
+    .playbar{
+        width: 330px;
+        font-size: 10px;
+    }
+    .seekbar{
+        width: 330px;
+    }
 }
