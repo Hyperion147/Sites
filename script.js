@@ -1,18 +1,9 @@
-const buttons = document.querySelectorAll('.button');
-const body = document.querySelector("body")
+const clock = document.querySelector('#clock')
 
-buttons.forEach(function(button){
-    button.addEventListener('click', function(e){
-        
-        if(e.target.id === 'green'){
-            body.style.backgroundColor = e.target.id;
-        }
-        if(e.target.id === 'grey'){
-            body.style.backgroundColor = e.target.id;
-        }
-        if(e.target.id === 'red'){
-            body.style.backgroundColor = e.target.id;
-        }
-        
-    });
-});
+setInterval(function(){
+    let date = new Date();
+    clock.innerHTML = date.toLocaleTimeString();
+    console.log(date);
+    
+}, 1000);
+
