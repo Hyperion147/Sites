@@ -10,19 +10,18 @@
 </head>
 
 <body>
-  
-  <ul class="test">
-    <li class="test1">Test</li>
-    <li class="test2">Test</li>
-  </ul>
+
+
+
 
   <script>
-    document.querySelector('.test').addEventListener('click', (e)=>{
-      console.log(e.target);
-      let rem = e.target;
-      
-      
-    }, false)
+    console.log(1);
+    setTimeout((e) => {
+      console.log(2);
+    }, 0)
+    console.log(3);
+
+
   </script>
 
   <script src="script.js"></script>
