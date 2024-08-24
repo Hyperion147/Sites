@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic of css</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            display: flex;
+            justify-content: center;
+            background-color: gray;
+            height: 100vh;
+        }
+
+        .card {
+            border: 2px solid black;
+            border-radius: 25px;
+            height: 600px;
+            width: 400px;
+            margin-top: 50px;
+
+
+            background-color: whitesmoke;
+
+        }
+
+        .img {
+            padding: 25px;
+        }
+
+        .img img {
+            border-radius: 15px;
+        }
+
+        .heading {
+            padding: 15px;
+            margin: 10px;
+        }
+
+        .heading h1 {
+            font-size: 40px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .para {
+            padding: 0 25px;
+            font-size: 22px;
+        }
+
+        .para p {
+            color: gray;
+        }
+
+        .smol {
+            padding-left: 28px;
+
+        }
+
+        .smol span {
+            padding: 0 6px;
+            border-radius: 8px;
+            border: 2px solid gray;
+            color: gray;
+
+        }
+
+        .btn {
+            text-align: center;
+            padding-top: 20px;
+
+
+        }
+
+        .btn button {
+            width: 120px;
+            height: 35px;
+            border-radius: 20px;
+            background-color: rgb(181, 222, 255);
+            color: rgb(3, 23, 127);
+            font-size: 12px;
+            border: none;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .btn button:hover {
+            background-color: rgb(87, 160, 220);
+            color: rgb(0, 0, 0);
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="card">
+            <div class="img">
+
+                <img width="350px" src="1.jpg" alt="img not found">
+            </div>
+            <div class="text">
+                <span>
+                    <div class="smol">
+                        <span>Forest</span>
+                        <span>Habibi </span>
+                    </div>
+                </span>
+            </div>
+            <div class="heading">
+                <h1> HYPERION
+                </h1>
+
+            </div>
+            <div class="para">
+                <p> This is a image of Habibi in Forest.
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore, maiores.</p>
+
+            </div>
+            <div class="btn">
+                <button>Read More</button>
+            </div>
+        </div>
+
+
+
+    </div>
+
+
+</body>
+
+</html>
