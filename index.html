@@ -11,9 +11,19 @@
 
 <body>
   
-  
+  <ul class="test">
+    <li class="test1">Test</li>
+    <li class="test2">Test</li>
+  </ul>
 
-  
+  <script>
+    document.querySelector('.test').addEventListener('click', (e)=>{
+      console.log(e.target);
+      let rem = e.target;
+      
+      
+    }, false)
+  </script>
 
   <script src="script.js"></script>
 
