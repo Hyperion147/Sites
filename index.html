@@ -10,42 +10,10 @@
 </head>
 
 <body>
-  <button id="btn">Click To Get Card</button>
-  <div class="card">
-
-  </div>
+  
 
 
-  <script>
-
-
-    const button = document.getElementById("btn")
-
-    const requestUrl = 'https://api.github.com/users/hyperion147';
-    const xhr = new XMLHttpRequest();
-    xhr.open('GET', requestUrl)
-    xhr.onreadystatechange = () => {
-      console.log(xhr.readyState);
-      if(xhr.readyState === 4){
-        const data = JSON.parse(xhr.responseText)
-        const followers = (data.followers);
-        const avatar = (data.avatar_url);
-        console.log(avatar);
-
-
-        
-        button.addEventListener('click', ()=> {
-          const kekw = document.createElement("img")
-          kekw.setAttribute("src","img")
-        })
-        
-      }
-      
-    }
-    xhr.send();
-
-
-  </script>
+  
   <script src="script.js"></script>
 
 </body>
