@@ -21,10 +21,10 @@ let fontList = [
 ];
 
 const initializer = () => {
-    hightlighter(alignButtons, true);
-    hightlighter(spacingButtons, true);
-    hightlighter(formatButtons, false);
-    hightlighter(scriptButtons, true);
+    highlighter(alignButtons, true);
+    highlighter(spacingButtons, true);
+    highlighter(formatButtons, false);
+    highlighter(scriptButtons, true);
 
     fontList.map((value) => {
         let option = document.createElement("option");
@@ -94,4 +94,4 @@ const highlighterRemover = (className) => {
     });
 };
 
-window.initializer();
+window.onload = initializer();
