@@ -11,8 +11,8 @@ const HistorySection = () => {
     <section id="history" className="my-8">
       <h1 className="text-center text-2xl font-bold">Historic Figures</h1>
       <div className="card bg-gray-100 p-4 my-2 rounded-lg cursor-pointer" onClick={() => toggleDetails('history1')}>
-        <h3 className="text-xl font-semibold">महान आजीवक मक्खलि गोसाल</h3>
-        <h4 className="text-lg">Mahan Ajivak Makkhali Gosal</h4>
+        <h3 className="text-xl font-semibold text-center">महान आजीवक मक्खलि गोसाल</h3>
+        <h4 className="text-lg text-center">Mahan Ajivak Makkhali Gosal</h4>
       </div>
       {showDetails === 'history1' && (
         <div className="details bg-[#d3eec9] p-4 my-2 border-l-4 border-[#333]">

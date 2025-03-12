@@ -12,8 +12,8 @@ const LiteratureSection = () => {
       <h1 className="text-center text-2xl font-bold">Literature Overview</h1>
       <div className="card bg-gray-100 p-4 my-2 rounded-lg cursor-pointer" onClick={() => toggleDetails('lit1')}>
         <img src="https://www.vaniprakashan.com/uploads/author_image/author_157.png" alt="Dr. Dharamveer" className="w-[200px] mx-auto" />
-        <h3 className="text-xl font-semibold mt-2">डॉ. धर्मवीर</h3>
-        <h4 className="text-lg">Dr. Dharamveer</h4>
+        <h3 className="text-xl font-semibold mt-2 text-center">डॉ. धर्मवीर</h3>
+        <h4 className="text-lg text-center">Dr. Dharamveer</h4>
       </div>
       {showDetails === 'lit1' && (
         <div className="details bg-[#d3eec9] p-4 my-2 border-l-4 border-[#333]">

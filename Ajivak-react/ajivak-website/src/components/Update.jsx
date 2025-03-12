@@ -3,6 +3,8 @@ import Header from './components/Header';
 import BookSlider from './components/BookSlider';
 import HistorySection from './components/HistorySection';
 import Footer from './components/Footer';
+import AboutSection from './AboutSection';
+import LiteratureSection from './LiteratureSection';
 
 const App = () => {
   return (

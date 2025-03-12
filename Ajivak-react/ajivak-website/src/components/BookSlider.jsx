@@ -1,64 +1,80 @@
-import React, { useEffect } from 'react';
+import Slider from "react-slick"
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
-const BookSlider = () => {
-  useEffect(() => {
-    const next = document.querySelector('.next');
-    const prev = document.querySelector('.prev');
-
-    const handleNextClick = () => {
-      let items = document.querySelectorAll('.item');
-      document.querySelector('.slide').appendChild(items[0]);
-    };
-
-    const handlePrevClick = () => {
-      let items = document.querySelectorAll('.item');
-      document.querySelector('.slide').prepend(items[items.length - 1]);
-    };
-
-    next.addEventListener('click', handleNextClick);
-    prev.addEventListener('click', handlePrevClick);
-
-    // Cleanup event listeners
-    return () => {
-      next.removeEventListener('click', handleNextClick);
-      prev.removeEventListener('click', handlePrevClick);
-    };
-  }, []);
-
+function BookSlider() {
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
+  };
   return (
-    <div className="slider mt-10">
-      <div className="books relative w-[1100px] h-[700px] mx-auto shadow-lg">
-        <div className="slide">
-          {[1, 2, 3, 4, 5, 6, 7].map((item, index) => (
-            <div
-              key={index}
-              className={`item absolute w-[200px] h-[300px] bg-cover bg-center rounded-lg shadow-lg ${
-                index === 0 || index === 1 ? 'top-0 left-0 w-[40%] h-full rounded-none' : ''
-              }`}
-              style={{
-                backgroundImage: `url(https://via.placeholder.com/200x300)`,
-                left: index === 2 ? '50%' : index === 3 ? 'calc(50% + 220px)' : 'calc(50% + 440px)',
-              }}
-            >
-              <div className="content absolute top-[83%] left-[50%] transform -translate-x-1/2 w-[300px] text-left hidden">
-                <button className="px-4 py-2 bg-[#7ff4c5] border border-[#424f43] font-bold rounded-lg">
-                  Read More
-                </button>
-              </div>
+    <div className="w-3/4 m-auto">
+      <div className="mt-20">
+        <Slider {...settings} >
+        {images.map((m) => (
+          <div className='bg-green-200 h-[600px] text-black rounded-xl'>
+            <div className='rounded-t-xl flex justify-center'>
+              <img src={m.img} alt='' className='h-[500px]' />
             </div>
-          ))}
-        </div>
+            <div className='flex justify-center mt-5'>
+              <button className='bg-green-800 text-white text-lg px-6 py-1 rounded-xl'>Read More</button>
+            </div>
+          </div>
+
+        ))}
+        </Slider>
       </div>
-      <div className="button text-center relative bottom-[160px] left-[320px]">
-        <button className="prev px-4 py-2 bg-white border border-black rounded-lg mx-2" aria-label="Previous">
-          Prev
-        </button>
-        <button className="next px-4 py-2 bg-white border border-black rounded-lg mx-2" aria-label="Next">
-          Next
-        </button>
-      </div>
+
     </div>
   );
-};
+}
+
+const images = [
+  {
+    img: "https://www.vaniprakashan.com/uploads/product_image/dalit-chintan-ka-vikas.jpg"
+  },
+  {
+    img: "https://www.vaniprakashan.com/uploads/product_image/chamar-ki-beti-roopa.jpg"
+  },
+  {
+    img: "https://www.vaniprakashan.com/uploads/product_image/42427afc3622243645d7ffcd9ada2107.jpg"
+  },
+  {
+    img: "https://www.vaniprakashan.com/uploads/product_image/d5179226eb72e9bc7c3af088938f8de0.jpg"
+  },
+  {
+    img: "https://www.vaniprakashan.com/uploads/product_image/63c4cb01943e8ca33eb6c4b24f8e6363.jpg"
+  }
+  
+]
 
 export default BookSlider;
