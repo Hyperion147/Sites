@@ -4,7 +4,7 @@ import "slick-carousel/slick/slick-theme.css";
 
 function BookSlider() {
   const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     speed: 500,
     slidesToShow: 3,
@@ -41,9 +41,9 @@ function BookSlider() {
       <div className="mt-20">
         <Slider {...settings} >
         {images.map((m) => (
-          <div className='bg-green-200 h-[600px] text-black rounded-xl'>
-            <div className='rounded-t-xl flex justify-center'>
-              <img src={m.img} alt='' className='h-[500px]' />
+          <div className='bg-green-200 h-[600px] text-black'>
+            <div className='rounded-t-xl flex justify-center mt-5'>
+              <img src={m.img} alt='' className='h-[500px] rounded-xl' />
             </div>
             <div className='flex justify-center mt-5'>
               <button className='bg-green-800 text-white text-lg px-6 py-1 rounded-xl'>Read More</button>

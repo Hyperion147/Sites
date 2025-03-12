@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.slick-slider > div{
+    margin-top: 0 10;
+}
